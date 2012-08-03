@@ -1,0 +1,6 @@
+[submodule "paredit.vim"]
+	path = paredit.vim
+	url = git://github.com/vim-scripts/paredit.vim.git
+[submodule "julia-vim"]
+	path = julia-vim
+	url = git://github.com/JuliaLang/julia-vim.git
