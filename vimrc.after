@@ -4,6 +4,8 @@ set background=dark
 colorscheme solarized
 filetype plugin indent on
 
+let g:paredit_electric_return = 0
+
 " vimclojure conf
 let vimclojure#FuzzyIndent=1
 let vimclojure#HighlightBuiltins=1
