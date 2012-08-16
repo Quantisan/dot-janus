@@ -1,2 +1,5 @@
 let mapleader = ","
 let maplocalleader = "\\"
+
+" Disable Vroom since I don't do ruby
+call janus#disable_plugin('vroom')
