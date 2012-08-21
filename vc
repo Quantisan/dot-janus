@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Start vim with a unique port for vimclojure so I can edit multiple, unrelated
+# clojure projects without polluting each other's environment.
+
+VIMCLOJURE_PORT=`unused-port`
+echo "Using vimclojure port $VIMCLOJURE_PORT"
+mvim -c "let vimclojure#NailgunPort=\"$VIMCLOJURE_PORT\"" $* &
+lein vimclojure :port $VIMCLOJURE_PORT
+
+# vim:ft=sh
