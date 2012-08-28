@@ -31,10 +31,14 @@ import vimclojure.nailgun.NGContext;
 
 public class Nail {
     /* Load up vimclojure */
+    static Var nailDriver;
+
     static {
         try {
             final Var require = RT.var("clojure.core", "require");
-            require.invoke(Symbol.create("vimclojure.nails"));
+            require.invoke(Symbol.create("vimclojure.connector.nailgun"));
+
+            nailDriver = RT.var("vimclojure.connector.nailgun", "nailgun-driver");
         } catch (Exception exc) {
             Throwable e = exc;
             System.err.println("A crisis has arisen:");
@@ -43,21 +47,6 @@ public class Nail {
     }
 
     public static void nailMain(NGContext ctx) throws Exception {
-        final String nail = ctx.getArgs()[0];
-        int slash = nail.indexOf("/");
-
-        String namespace;
-        String function;
-
-        if (slash == -1) {
-            namespace = "vimclojure.nails";
-            function = nail;
-        } else {
-            namespace = nail.substring(0, slash);
-            function = nail.substring(slash + 1);
-        }
-
-        final Var nailDriver = RT.var(namespace, function);
         nailDriver.invoke(ctx);
     }
 }
