@@ -25,7 +25,7 @@
     clojure.test)
   (:use
     [vimclojure.util :only [resolve-and-load-namespace safe-var-get stream->seq
-                            pretty-print pretty-print-causetrace in-reader]])
+                            pretty-print pretty-print-causetrace]])
   (:import
     clojure.lang.Var
     clojure.lang.Compiler
@@ -156,10 +156,10 @@
   Repl is retrieved using the given id. Output goes to *out* and *err*.
   The initial input line and the file are set to the supplied values.
   Ignore flags whether the evaluation result is saved in the star Vars."
-  [code id nspace file line ignore]
+  [id nspace file line ignore]
   (with-repl id nspace file line
     (try
-      (doseq [form (stream->seq (in-reader code))]
+      (doseq [form (stream->seq *in*)]
         (let [result (eval form)]
           ((if vimclojure.repl/*print-pretty* pretty-print prn) result)
           (when-not ignore

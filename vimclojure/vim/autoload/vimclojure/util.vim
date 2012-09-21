@@ -104,33 +104,5 @@ function! vimclojure#util#MoveForward()
 	call search('\S', 'W')
 endfunction
 
-function! vimclojure#util#ShellEscapeArgumentsWorker() dict
-	set noshellslash
-	return map(copy(self.vals), 'shellescape(v:val)')
-endfunction
-
-function! vimclojure#util#ShellEscapeArguments(vals)
-	let closure = {
-				\ 'vals': a:vals,
-				\ 'f':    function("vimclojure#util#ShellEscapeArgumentsWorker")
-				\ }
-
-	return vimclojure#util#WithSavedOption('shellslash', closure)
-endfunction
-
-function! vimclojure#util#Quote(code)
-	return escape(a:code, '\"')
-endfunction
-
-function! vimclojure#util#Literalize(code)
-	if type(a:code) == type([])
-		let code = join(a:code, "\n")
-	else
-		let code = a:code
-	endif
-
-	return '"'. vimclojure#util#Quote(code) .'"'
-endfunction
-
 " Epilog
 let &cpo = s:save_cpo

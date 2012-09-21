@@ -21,9 +21,6 @@
 ; THE SOFTWARE.
 
 (ns vimclojure.util
-  (:import
-    java.io.StringReader
-    clojure.lang.LineNumberingPushbackReader)
   (:require
     [clojure.pprint :as pprint]
     [clojure.stacktrace :as stacktrace]))
@@ -112,12 +109,15 @@
                             (assoc sopts sopt lopt))))
                 [{} {}]
                 (filter vector? specs))
-        rest-arg (when (symbol? (peek specs)) (name (peek specs)))]
+        rest-arg (when (symbol? (last specs)) (name (last specs)))]
     (loop [args   (seq args)
            argmap (hash-map)]
       (let [arg (first args)]
         (cond
-          (empty? args)  (thunk argmap)
+          (empty? args)  (if-not rest-arg
+                           (thunk argmap)
+                           (throw
+                             (Exception. "Missing command line arguments")))
 
           (some #{arg} ["-h" "--help" "-?"])
           (print-usage description specs)
@@ -382,12 +382,6 @@
       (catch Exception _
         (require namespace)
         (the-ns namespace)))))
-
-(defn in-reader
-  "Turn a given string into a LineNumberingPushbackReader suitable for
-  read."
-  [s]
-  (LineNumberingPushbackReader. (StringReader. s)))
 
 (defn stream->seq
   "Turns a given stream into a seq of Clojure forms read from the stream."
