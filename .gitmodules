@@ -22,3 +22,6 @@
 [submodule "YankRing.vim"]
 	path = YankRing.vim
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "snipmate.vim"]
+	path = snipmate.vim
+	url = git://github.com/msanders/snipmate.vim.git
