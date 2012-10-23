@@ -22,3 +22,6 @@
 [submodule "YankRing.vim"]
 	path = YankRing.vim
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "vim-ipython"]
+	path = vim-ipython
+	url = git://github.com/ivanov/vim-ipython.git
