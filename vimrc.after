@@ -22,6 +22,7 @@ let vimclojure#SplitPos = "bottom"
 let vimclojure#SplitSize = 15
 let vimclojure#NailgunClient = $HOME . "/.janus/vimclojure/client/ng"
 
+autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 
