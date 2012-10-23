@@ -13,9 +13,6 @@
 [submodule "tabular"]
 	path = tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule "pyflakes-vim"]
-	path = pyflakes-vim
-	url = git://github.com/kevinw/pyflakes-vim.git
 [submodule "pep8"]
 	path = pep8
 	url = git://github.com/vim-scripts/pep8.git
