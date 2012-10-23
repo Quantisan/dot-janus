@@ -21,3 +21,5 @@ let vimclojure#WantNailgun = 1
 let vimclojure#SplitPos = "bottom"
 let vimclojure#SplitSize = 15
 let vimclojure#NailgunClient = $HOME . "/.janus/vimclojure/client/ng"
+
+let g:pyflakes_use_quickfix = 0

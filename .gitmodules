@@ -13,3 +13,6 @@
 [submodule "tabular"]
 	path = tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule "pyflakes-vim"]
+	path = pyflakes-vim
+	url = git://github.com/kevinw/pyflakes-vim.git
