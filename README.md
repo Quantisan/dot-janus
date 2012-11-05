@@ -2,9 +2,9 @@ my [janus](https://github.com/carlhuda/janus) setup for vim. Mostly for working 
 
 ## Setup
 
-### Symlink the two vimrc files
-
 ```bash
+git submodule init
+git submodule update
 ln -s ~/.janus/vimrc.before ~/.vimrc.before
 ln -s ~/.janus/vimrc.after ~/.vimrc.after
 ```
