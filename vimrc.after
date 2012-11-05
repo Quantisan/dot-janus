@@ -3,6 +3,7 @@ set t_Co=256
 set background=dark
 set nobackup
 set noswapfile
+set guifont=Inconsolata:h18
 colorscheme solarized
 filetype plugin indent on
 
