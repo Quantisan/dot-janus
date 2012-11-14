@@ -11,6 +11,7 @@ set completeopt=menuone,longest
 
 nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent> <F11> :YRShow<CR>
 
 let g:paredit_electric_return = 0
 
