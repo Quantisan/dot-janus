@@ -16,9 +16,6 @@
 [submodule "pep8"]
 	path = pep8
 	url = git://github.com/vim-scripts/pep8.git
-[submodule "syntastic"]
-	path = syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "YankRing.vim"]
 	path = YankRing.vim
 	url = git://github.com/vim-scripts/YankRing.vim.git
