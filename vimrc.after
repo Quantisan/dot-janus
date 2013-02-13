@@ -18,3 +18,6 @@ let g:paredit_electric_return = 0
 autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
