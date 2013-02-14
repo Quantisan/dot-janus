@@ -4,12 +4,6 @@
 [submodule "julia-vim"]
 	path = julia-vim
 	url = git://github.com/JuliaLang/julia-vim.git
-[submodule "vim-colors-solarized"]
-	path = vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim-surround"]
-	path = vim-surround
-	url = git://github.com/tpope/vim-surround.git
 [submodule "tabular"]
 	path = tabular
 	url = git://github.com/godlygeek/tabular.git
