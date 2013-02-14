@@ -13,6 +13,8 @@ nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <silent> <F11> :YRShow<CR>
 
+nnoremap <localleader>rt :Eval (clojure.test/run-tests)<CR>
+
 let g:paredit_electric_return = 0
 
 autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
