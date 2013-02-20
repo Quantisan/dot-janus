@@ -9,6 +9,8 @@ filetype plugin indent on
 
 set completeopt=menuone,longest
 
+nmap <Leader>q :nohlsearch<CR>
+nmap <silent><C-e> :e#<CR>
 map <Leader>fm :g/^\s*$/,/\S/-j<Bar>%s/\s\+$//<BAR>noh<CR>
 nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
