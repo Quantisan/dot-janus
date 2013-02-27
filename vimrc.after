@@ -19,6 +19,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <S-Enter> O<Esc>j
+nnoremap <CR> o<Esc>k
 
 let g:paredit_electric_return = 0
 autocmd FileType clojure setlocal lispwords+=facts,fact
