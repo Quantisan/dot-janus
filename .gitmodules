@@ -16,9 +16,6 @@
 [submodule "vim-ipython"]
 	path = vim-ipython
 	url = git://github.com/ivanov/vim-ipython.git
-[submodule "vim-foreplay"]
-	path = vim-foreplay
-	url = git://github.com/tpope/vim-foreplay.git
 [submodule "vim-classpath"]
 	path = vim-classpath
 	url = git://github.com/tpope/vim-classpath.git
