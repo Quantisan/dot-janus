@@ -18,7 +18,7 @@ nnoremap <silent><C-K> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 nnoremap <silent> <F11> :YRShow<CR>
 nnoremap <C-k> O<Esc>j
 nnoremap <C-j> o<Esc>k
-map <Leader>gg :ToggleGitGutter<CR>
+map <Leader>gg :GitGutterToggle<CR>
 
 let g:gitgutter_enabled = 0
 let g:paredit_electric_return = 0
