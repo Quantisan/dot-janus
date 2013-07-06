@@ -25,7 +25,8 @@ let g:paredit_electric_return = 0
 autocmd FileType clojure setlocal lispwords+=facts,fact
 autocmd FileType clojure nnoremap <localleader>rt :Require!<Bar>Eval (clojure.test/run-tests)<CR>
 autocmd FileType clojure nnoremap <localleader>a :A<CR>
-autocmd FileType clojure nnoremap <localleader>av :AV<CR>
+autocmd FileType clojure nnoremap <localleader>as :AV<CR>
+autocmd FileType clojure nnoremap <localleader>ai :AS<CR>
 
 autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 let g:pyflakes_use_quickfix = 0
