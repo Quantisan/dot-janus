@@ -22,6 +22,8 @@ map <Leader>gg :GitGutterToggle<CR>
 
 let g:gitgutter_enabled = 0
 let g:paredit_electric_return = 0
+let g:clojure_align_multiline_strings = 1
+let g:clojure_maxlines = 1000
 autocmd FileType clojure setlocal lispwords+=facts,fact
 autocmd FileType clojure nnoremap <localleader>rt :Require!<Bar>Eval (clojure.test/run-tests)<CR>
 autocmd FileType clojure nnoremap <localleader>a :A<CR>
